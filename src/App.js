@@ -1,85 +1,34 @@
-//import logo from './logo.svg';
-import "./App.css";
-import Navbar from "./sharedComponents/Navbar";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Main from './pages/layout/Main';
+import Home from './pages/Home/Home';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Report from './pages/Dashboard/Report/Report';
+import Income from './pages/Dashboard/Income/Income';
+import DashboardHome from './pages/Dashboard/DashboardHome/DashboardHome';
+import Sells from './pages/Dashboard/Sells/Sells';
+import BankAccounts from './pages/Dashboard/BankAccounts/BankAccounts';
 
-function App() {
-
-  /// hi  ,,,,,,,,,,,,,
+const App = () => {
   return (
-    <div className="App">
-      {/* <h1>Welcome to Acountant System</h1> */}
-      <Navbar></Navbar>
-      <header className="App-header"></header>
+    <div>
+<Router>
+  <Routes>
+<Route path='/' element={<Main/>}>
+<Route path='/' element={<Home/>}/>
+</Route>
+
+<Route path='/dashboard' element={<Dashboard/>}>
+<Route path='/dashboard' element={<DashboardHome/>}/>
+
+  <Route path='/dashboard/report' element={<Report/>}/>
+  <Route path='/dashboard/sells' element={<Sells/>}/>
+  <Route path='/dashboard/bankaccounts' element={<BankAccounts/>}/>
+</Route>
+</Routes>
+</Router>
     </div>
   );
-}
+};
 
 export default App;
-
-// import React, { useState } from "react";
-// import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-// import Dashboard from "./components/Dashboard";
-// import Ledger from "./components/ledger";
-// import Reports from "./components/Reports";
-// import Settings from "./components/Settings";
-
-// const App = () => {
-//   const [activeTab, setActiveTab] = useState("dashboard");
-
-//   const handleTabChange = (tab) => {
-//     setActiveTab(tab);
-//   };
-
-//   return (
-//     <Router>
-//       <div className="app-container">
-//         <nav className="navbar">
-//           <ul className="nav-menu">
-//             <li
-//               className={`nav-item ${
-//                 activeTab === "dashboard" ? "active" : ""
-//               }`}
-//             >
-//               <Link
-//                 to="/dashboard"
-//                 onClick={() => handleTabChange("dashboard")}
-//               >
-//                 Dashboard
-//               </Link>
-//             </li>
-//             <li
-//               className={`nav-item ${activeTab === "ledger" ? "active" : ""}`}
-//             >
-//               <Link to="/ledger" onClick={() => handleTabChange("ledger")}>
-//                 Ledger
-//               </Link>
-//             </li>
-//             <li
-//               className={`nav-item ${activeTab === "reports" ? "active" : ""}`}
-//             >
-//               <Link to="/reports" onClick={() => handleTabChange("reports")}>
-//                 Reports
-//               </Link>
-//             </li>
-//             <li
-//               className={`nav-item ${activeTab === "settings" ? "active" : ""}`}
-//             >
-//               <Link to="/settings" onClick={() => handleTabChange("settings")}>
-//                 Settings
-//               </Link>
-//             </li>
-//           </ul>
-//         </nav>
-
-//         <Switch>
-//           <Route path="/dashboard" component={Dashboard} />
-//           <Route path="/ledger" component={Ledger} />
-//           <Route path="/reports" component={Reports} />
-//           <Route path="/settings" component={Settings} />
-//         </Switch>
-//       </div>
-//     </Router>
-//   );
-// };
-
-// export default App;
