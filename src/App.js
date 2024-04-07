@@ -1,10 +1,12 @@
 //import logo from './logo.svg';
 import "./App.css";
+import Navbar from "./sharedComponents/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to Acountant System</h1>
+      {/* <h1>Welcome to Acountant System</h1> */}
+      <Navbar></Navbar>
       <header className="App-header"></header>
     </div>
   );
