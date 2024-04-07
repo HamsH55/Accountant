@@ -4,7 +4,7 @@ import Navbar from "./sharedComponents/Navbar";
 
 function App() {
 
-  /// Hello Push
+  /// hi 
   return (
     <div className="App">
       {/* <h1>Welcome to Acountant System</h1> */}
