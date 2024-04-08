@@ -4,10 +4,10 @@ import Main from './pages/layout/Main';
 import Home from './pages/Home/Home';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Report from './pages/Dashboard/Report/Report';
-import Income from './pages/Dashboard/Income/Income';
 import DashboardHome from './pages/Dashboard/DashboardHome/DashboardHome';
 import Sells from './pages/Dashboard/Sells/Sells';
 import BankAccounts from './pages/Dashboard/BankAccounts/BankAccounts';
+import Login from './Authentication/Login';
 
 const App = () => {
   return (
@@ -25,6 +25,7 @@ const App = () => {
   <Route path='/dashboard/sells' element={<Sells/>}/>
   <Route path='/dashboard/bankaccounts' element={<BankAccounts/>}/>
 </Route>
+<Route path='login' element={<Login></Login>}></Route>
 </Routes>
 </Router>
     </div>
