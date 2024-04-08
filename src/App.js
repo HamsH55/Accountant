@@ -4,10 +4,11 @@ import Main from './pages/layout/Main';
 import Home from './pages/Home/Home';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Report from './pages/Dashboard/Report/Report';
-import Income from './pages/Dashboard/Income/Income';
+//import Income from './pages/Dashboard/Income/Income';
 import DashboardHome from './pages/Dashboard/DashboardHome/DashboardHome';
 import Sells from './pages/Dashboard/Sells/Sells';
 import BankAccounts from './pages/Dashboard/BankAccounts/BankAccounts';
+// import Typography from '@mui/material/Typography';
 
 const App = () => {
   return (

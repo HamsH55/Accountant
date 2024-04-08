@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom Font */
+
+@font-face{
+  font-family: Rubik;
+  src:url("/public/fonts/Rubik/Rubik-Italic.ttf");
+  weight:500;
+}
